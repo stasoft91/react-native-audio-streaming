@@ -1,11 +1,41 @@
 {
-  "name": "react-native-audio-streaming",
-  "version": "2.3.2",
-  "description": "React native audio streaming library for android and iOS",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:tlenclos/react-native-audio-streaming.git"
+  "_from": "react-native-audio-streaming",
+  "_id": "react-native-audio-streaming@2.3.2",
+  "_inBundle": false,
+  "_integrity": "sha1-PyW2HBOoCT1nABzbXUWPxaMYWDU=",
+  "_location": "/react-native-audio-streaming",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-native-audio-streaming",
+    "name": "react-native-audio-streaming",
+    "escapedName": "react-native-audio-streaming",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-audio-streaming/-/react-native-audio-streaming-2.3.2.tgz",
+  "_shasum": "3f25b61c13a8093d67001cdb5d458fc5a3185835",
+  "_spec": "react-native-audio-streaming",
+  "_where": "/Users/vgavshin/Documents/Tui",
+  "author": {
+    "name": "Thibault Lenclos"
+  },
+  "bugs": {
+    "url": "https://github.com/tlenclos/react-native-audio-streaming/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "React native audio streaming library for android and iOS",
+  "devDependencies": {
+    "react-native": ">=0.31.0"
+  },
+  "homepage": "https://github.com/tlenclos/react-native-audio-streaming#readme",
   "keywords": [
     "react-native",
     "audio streaming",
@@ -14,19 +44,18 @@
     "web radio",
     "player"
   ],
-  "author": "Thibault Lenclos",
   "license": "MIT",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Not test yet sadly :(\" && exit 0"
-  },
+  "name": "react-native-audio-streaming",
   "peerDependencies": {
     "react-native": ">=0.31.0"
   },
-  "devDependencies": {
-    "react-native": ">=0.31.0"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tlenclos/react-native-audio-streaming.git"
   },
-  "dependencies": {
-    "prop-types": "^15.5.10"
-  }
+  "scripts": {
+    "test": "echo \"Not test yet sadly :(\" && exit 0"
+  },
+  "version": "2.3.2"
 }

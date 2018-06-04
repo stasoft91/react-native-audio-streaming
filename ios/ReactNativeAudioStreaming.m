@@ -1,5 +1,5 @@
-#import <React/RCTBridgeModule.h>
-#import <React/RCTEventDispatcher.h>
+#import "RCTBridgeModule.h"
+#import "RCTEventDispatcher.h"
 
 #import "ReactNativeAudioStreaming.h"
 
@@ -225,6 +225,22 @@ RCT_EXPORT_METHOD(getStatus: (RCTResponseSenderBlock) callback)
    [self setNowPlayingInfo:true];
 }
 
+- (BOOL)requiresMainQueueSetup
+{
+   return YES;
+}
+
+- (NSDictionary *)constantsToExport
+{
+  return @{ @"PLAYING": @"PLAYING",
+            @"PAUSED": @"PAUSED",
+            @"STOPPED": @"STOPPED",
+            @"BUFFERING": @"BUFFERING",
+            @"ERROR": @"ERROR",
+            @"STREAMING": @"STREAMING",
+            @"METADATA_UPDATED": @"METADATA_UPDATED" };
+}
+
 - (void)audioPlayer:(STKAudioPlayer *)player stateChanged:(STKAudioPlayerState)state previousState:(STKAudioPlayerState)previousState
 {
    NSNumber *duration = [NSNumber numberWithFloat:self.audioPlayer.duration];
@@ -444,6 +460,8 @@ RCT_EXPORT_METHOD(getStatus: (RCTResponseSenderBlock) callback)
                                       appName ? appName : @"AppName", MPMediaItemPropertyTitle,
                                       [NSNumber numberWithFloat:isPlaying ? 1.0f : 0.0], MPNowPlayingInfoPropertyPlaybackRate, nil];
       [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = nowPlayingInfo;
+   } else {
+      [MPNowPlayingInfoCenter defaultCenter].nowPlayingInfo = nil;
    }
 }
 
